@@ -1,4 +1,4 @@
-name: Enviroments
+name: Environments
 on:
   workflow_dispatch:
     inputs:
@@ -6,7 +6,7 @@ on:
         type: environment
         default: test
         required: false
-        description: 'Environment name'
+        description: Environment name
 
 jobs:
   print:
