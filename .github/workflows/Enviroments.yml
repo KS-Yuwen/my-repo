@@ -2,7 +2,7 @@ name: Enviroments
 on:
   workflow_dispatch:
     inputs:
-      enviroment-name:
+      environment-name:
         type: environment
         default: test
         required: false
@@ -11,7 +11,7 @@ on:
 jobs:
   print:
     runs-on: ubuntu-latest
-    environment: ${{ inputs.enviroment-name }}
+    environment: ${{ inputs.environment-name }}
     env:
       USERNAME: ${{ vars.USERNAME }}
       PASSWORD: ${{ secrets.PASSWORD }}
