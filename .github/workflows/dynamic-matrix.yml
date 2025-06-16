@@ -13,7 +13,7 @@ jobs:
     print:
         needs: [prepare]
         strategy:
-          matrix: ${{ fromJson(needs.prepare.outputs.matrix-json).runner }}
+          matrix: ${{ fromJson(needs.prepare.outputs.matrix-json) }}
         runs-on: ${{ matrix.runner }}
         steps:
             - run: echo "${RUNNER_OS}"
